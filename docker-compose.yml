@@ -10,10 +10,12 @@ services:
     build: ./docker/php
     volumes:
     - ./web:/var/www
-    - vendor-store:/var/www/laravel/vendor
-    - node_modules-store:/var/www/laravel/node_modules
+    - vendor-store:/var/www/html/vendor
+    - node_modules-store:/var/www/html/node_modules
     environment:
       TZ: Asia/Tokyo
+    ports:
+    - 8000:8000
 
   nginx:
     image: nginx
