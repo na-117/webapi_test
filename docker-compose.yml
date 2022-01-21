@@ -12,6 +12,7 @@ services:
     - ./web:/var/www
     - vendor-store:/var/www/html/vendor
     - node_modules-store:/var/www/html/node_modules
+    - ./docker/php/xdebug.ini:/usr/local/etc/php/xdebug.ini
     environment:
       TZ: Asia/Tokyo
     ports:
